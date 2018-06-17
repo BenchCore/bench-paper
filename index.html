@@ -16,7 +16,7 @@
     <div class="container-fluid">
       <div class="row noprint">
         <div class="col-md-12 bg-band-grey">
-          
+
           <div class="page-header text-center logo"><a href="index.html"><img src="images/wallet.png" title="BEX Paper Wallet" alt="BEX Paper Wallet"></a></div>
         </div>
         <div class="col-md-12 bg-band-grey title-container">
@@ -33,11 +33,12 @@
     <script type="text/ng-template" id="entropy">
 
       <div ng-show="stage == 1" class="row noprint btns">
+        <br>
         <div class="col-md-12 text-center">
-          <button type="button" ng-click="random.start()" ng-disabled="btn_disabled" class="btn btn-info btn_primary">Create a new random wallet</button>
+          <button type="button" ng-click="random.start()" ng-disabled="btn_disabled" class="btn btn-info btn_primary">Create a BEX Wallet</button>
         </div>
         <div class="col-md-12 text-center">
-          <button type="button" ng-click="enter.start()" ng-disabled="btn_disabled" class="btn btn-info">Enter a secret passphrase</button>
+          <button type="button" ng-click="enter.start()" ng-disabled="btn_disabled" class="btn btn-info">Import BEX Wallet</button>
         </div>
       </div>
       <div ng-show="enter.started" class="row noprint stage-2">
