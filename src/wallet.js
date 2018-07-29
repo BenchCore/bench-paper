@@ -2,7 +2,7 @@
 import crypto from 'crypto'
 
 import bip39 from 'bip39'
-import bexjs from 'bexjs'
+import bcorejs from 'bcorejs'
 
 angular.module('wallet', [])
   .factory('wallet', () => {
@@ -13,8 +13,8 @@ angular.module('wallet', [])
           passphrase = bip39.generateMnemonic()
         }
 
-        let networks = bexjs.networks
-        let ecpair = bexjs.ECPair.fromSeed(passphrase, networks.bex)
+        let networks = bcorejs.networks
+        let ecpair = bcorejs.ECPair.fromSeed(passphrase, networks.bex)
 
         let publicKey = ecpair.getPublicKeyBuffer().toString('hex')
         let address = ecpair.getAddress().toString('hex')
